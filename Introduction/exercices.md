@@ -1,12 +1,11 @@
-***1.** (a) Factor $2^{15}-1=32,767$ into a product of two smaller positive integers.
-
+**\*1.** (a) Factor $2^{15}-1=32,767$ into a product of two smaller positive integers.
 
 $$n = 15\qquad  a, b = 3, 5 $$
 
 Let
 $$x=2^b-1 = 2^{5}-1 = 32 - 1 = 31$$
 and
-$$y = 1 + 2^b + 2^{2b} +...+2^{(a-1)b} = 1 + 2^5 + 2^{10} = 1057$$
+$$y = 1 + 2^b + 2^{2b} +\ldots +2^{(a-1)b} = 1 + 2^5 + 2^{10} = 1057$$
 
 $$ xy = 32,767 = 2^n - 1$$
 
@@ -19,7 +18,6 @@ $$xy = z = 2^n-1 = 2^{32,767} - 1$$
 We take factors $a=1057$ and $b=31$ from part (a), then
 
 $$x = 2^b - 1 = 2^{31} - 1 = 2,147,483,647 $$
-
 
 **2.** Make some conjectures about the values of $n$ for which $3^n − 1$ is prime or the values of $n$ for which $3^n − 2^n$ is prime. (You might start by making a table similar to Figure 1.)
 
@@ -35,16 +33,15 @@ $$x = 2^b - 1 = 2^{31} - 1 = 2,147,483,647 $$
 | 9   | no: $9= 3 \times 3$  | 19682     | no: $19682= 2 \times 9841$  | 19171       | no: $19171= 19 \times 1009$ |
 | 10  | no: $10= 2 \times 5$ | 59048     | no: $59048= 2 \times 29524$ | 58025       | no: $58025= 5 \times 11605$ |
 
+**Conjecture 1.** _Suppose $n$ is an integer larger than 1. Then $3^n -1$ will not be prime._
 
-**Conjecture 1.** *Suppose $n$ is an integer larger than 1. Then $3^n -1$ will not be prime.*
-
-***3.** The proof of Theorem 3 gives a method for finding a prime number different
+**\*3.** The proof of Theorem 3 gives a method for finding a prime number different
 from any in a given list of prime numbers.
 
 (a) Use this method to find a prime different from 2, 3, 5, and 7.
 
-Let 
-$$m = p_1p_2...p_n+1=2\times3\times5\times7 + 1 = 211$$
+Let
+$$m = p_1p_2\ldots p_n+1=2\times3\times5\times7 + 1 = 211$$
 
 $m>1$, therefore $m=211$ is either prime or a product of primes
 
@@ -52,7 +49,7 @@ $m=211$ is in fact, prime, as its not divisible by any number preceding it.
 
 (b) Use this method to find a prime different from 2, 5, and 11.
 
-$$m = p_1p_2...p_n+1=2\times5\times11+ 1 = 111$$
+$$m = p_1p_2\ldots p_n+1=2\times5\times11+ 1 = 111$$
 
 $m>1$, but $m=111$ is not prime, since $111/3=37$, here $q=3$ which is prime and is not in the original list.
 
