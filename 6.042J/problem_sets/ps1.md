@@ -227,4 +227,4 @@ $(2i)^2+(2i)^2+(2i)^2=4i^2+4i^2+4i^2=2(6i^2)$, since $6i^2$ is an integer, $w^2+
 
 Suppose $z$, is even, then for some integer $i\in \Z$, $z=2i$, then
 
-$z^2=(2i)^2=4i^2=2(2i^2)$, since $2i^2$ is an integer, $z^2$ is is even. Thus, if $z$, is even, then $w$, $x$ and $y$ are even.
+$z^2=(2i)^2=4i^2=2(2i^2)$, since $2i^2$ is an integer, $z^2$ is even. Thus, if $z$, is even, then $w$, $x$ and $y$ are even.
