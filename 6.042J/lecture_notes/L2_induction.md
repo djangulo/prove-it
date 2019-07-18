@@ -80,13 +80,11 @@ $h_2,h_3,\ldots ,h_{n+1}$ are all the same color
 
 Since $color(h_1)=color(h_2,\ldots , h_n)=color(h_{n+1})$
 
-$\implies$ all $n+1$ are the same color ($\implies P(n+1)$) 
-
+$\implies$ all $n+1$ are the same color ($\implies P(n+1)$)
 
 The universe of discourse will be the set $H$ of all horses. For any horse $h$, let $C_h$ be the color of that horse, and $S(C_{h_1}, C_{h_2})$ be "$h_1$ and $h_2$ have the same color", then:
 
 $\forall h\in H\{\forall t \in H (S(h,t))\}$
-
 
 # Courtyard problem
 
