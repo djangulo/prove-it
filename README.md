@@ -1,3 +1,3 @@
 ## How to prove it
 
-Notes, worked examples and exercises
+3rd edition Notes, worked examples and exercises

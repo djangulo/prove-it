@@ -3,23 +3,17 @@
 $$n = 15\qquad  a, b = 3, 5 $$
 
 Let
-$$x=2^b-1 = 2^{5}-1 = 32 - 1 = 31$$
+$$x= 2^{5}-1 = 31$$
 and
-$$y = 1 + 2^b + 2^{2b} +\ldots +2^{(a-1)b} = 1 + 2^5 + 2^{10} = 1057$$
+$$y = 1 + 2^5 + 2^{10} = 1057$$
 
-$$ xy = 32,767 = 2^n - 1$$
+$$ xy =  32,767 = 2^{15} - 1$$
 
-(b) Find an integer $x$ such that $1 < x < 2^{32767} − 1$ and $2^{32767} − 1$ is divisible by $x$.
+(b) Find an integer $x$ such that $1 < x < 2^{32767} - 1$ and $2^{32767} - 1$ is divisible by $x$.
 
-$n=15$ is not prime, therefore $2^n-1=32,767$ is not prime; therefore $2^{32,767} -1$ will not be prime either. $x$ exists!
+We already know that $1057$ and $31$ are factors of $32,767$. Two possible values for x are then $x = 2^{1057}-1$ and $x = 2^{31} - 1$
 
-$$xy = z = 2^n-1 = 2^{32,767} - 1$$
-
-We take factors $a=1057$ and $b=31$ from part (a), then
-
-$$x = 2^b - 1 = 2^{31} - 1 = 2,147,483,647 $$
-
-**2.** Make some conjectures about the values of $n$ for which $3^n − 1$ is prime or the values of $n$ for which $3^n − 2^n$ is prime. (You might start by making a table similar to Figure 1.)
+**2.** Make some conjectures about the values of $n$ for which $3^n - 1$ is prime or the values of $n$ for which $3^n - 2^n$ is prime. (You might start by making a table similar to Figure 1.)
 
 | n   | Is n prime           | $3^n - 1$ | Is $3^n - 1$ prime          | $3^n - 2^n$ | Is $3^n - 2^n$ prime        |
 | --- | -------------------- | --------- | --------------------------- | ----------- | --------------------------- |
@@ -41,11 +35,12 @@ from any in a given list of prime numbers.
 (a) Use this method to find a prime different from 2, 3, 5, and 7.
 
 Let
+
 $$m = p_1p_2\ldots p_n+1=2\times3\times5\times7 + 1 = 211$$
 
-$m>1$, therefore $m=211$ is either prime or a product of primes
-
-$m=211$ is in fact, prime, as its not divisible by any number preceding it.
+- $m=211$ is not divisible $2$, $3$, $5$, or $7$.
+- $m=211$ is greater than $1$, so its either prime o a product of primes.
+- $m=211$ is actually prime, and its not in the list.
 
 (b) Use this method to find a prime different from 2, 5, and 11.
 
@@ -55,39 +50,7 @@ $m>1$, but $m=111$ is not prime, since $111/3=37$, here $q=3$ which is prime and
 
 **4.** Find five consecutive integers that are not prime.
 
-Poorly optimized algorithm with $O(n^2)$ growth.
-
-```python
-def test_primality(n):
-    if n == 1 or n == 2:
-        return True
-    for i in range(2,n+1):
-        if n!= i and n % i == 0:
-            return False
-        if n == i:
-            return True
-
-def find_5_non_primes(start, n):
-    ans = ''
-    for i in range(start,n,2):
-        if test_primality(i):
-            continue
-        for j in range(1,6):
-            if test_primality(i+j):
-                ans = ''
-                break
-            # passed the prime-test wall
-            ans += ' ' + str(i+j)
-        if len(ans.split(' ')) >= 5:
-            print(ans)
-            return
-    print('no such sequence found in 1 through %s' % n)
-```
-
-```python
->>> find_5_non_primes(0,100)
- 91 92 93 94 95
-```
+The first occurrence of this is 24, 25, 26, 27, and 28.
 
 **5.** Use the table in Figure 1 and the discussion on p. 5 to find two more perfect
 numbers.
@@ -99,3 +62,15 @@ Excluding $6=2^1(2^2-1)$ and $28=2^2(2^3-1)$ which are already given.
 Inserting $n$ for the next primes 5 and 7 leaves us with
 
 $$2^4(2^5-1)=496\qquad and \qquad 2^6(2^7-1)=8128$$
+
+6. The sequence 3, 5, 7 is a list of three prime numbers such that each pair of adjacent numbers in the list differ by two. Are there any more such "triplet primes"?
+
+7. A pair of distinct positive integers $(m,n)$ is called *amicable* if the sum of all positive integers smaller than $n$ that divide $n$ is $m$, and the sum of all positive integers smaller than $m$ that divide $m$ is $n$. Show that $(220, 284)$ is amicable.
+
+Divisiors of 220: 1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110
+
+$1+ 2+ 4+ 5+ 10+ 11+ 20+ 22+ 44+ 55+ 110=284$
+
+Divisors of 284: 1, 2, 4, 71, 142
+
+$1+2+4+71+142=220$
